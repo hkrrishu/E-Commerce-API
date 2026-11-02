@@ -11,7 +11,9 @@ exports.getProductById = (req, res) => {
     res.send(result);
 };
 
-exports.addProduct = (req, res) => {
-    const result = productService.addProduct();
-    res.send(result);
+exports.postProduct = (req, res) => {
+    const data = req.body;
+    console.log(data);
+    res.json({value: data.productName});
+
 };
